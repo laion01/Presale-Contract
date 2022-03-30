@@ -28,7 +28,7 @@ module.exports = {
     hardhat: {
     },
     bsctestnet: {
-      url: "https://speedy-nodes-nyc.moralis.io/63021305c6423bed5d079c57/bsc/testnet",
+      url: "https://speedy-nodes-nyc.moralis.io/48589f1197db92bd84b05d0b/bsc/testnet",
       chainId: 97,
       // gasPrice: 20000000000,
       accounts: {mnemonic: mnemonic}
