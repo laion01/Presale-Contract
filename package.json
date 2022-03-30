@@ -19,15 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/c-spider/XSEED-Token-Contract.git"
+    "url": "git+https://github.com/c-spider/Presale-Contract.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/c-spider/XSEED-Token-Contract/issues"
+    "url": "https://github.com/c-spider/Presale-Contract/issues"
   },
-  "homepage": "https://github.com/c-spider/XSEED-Token-Contract#readme",
+  "homepage": "https://github.com/c-spider/Presale-Contract#readme",
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.4",
     "@nomiclabs/hardhat-etherscan": "^3.0.0",
