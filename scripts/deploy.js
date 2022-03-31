@@ -21,6 +21,10 @@ async function main() {
   const CNTPresale = await hre.ethers.getContractFactory("CNTPresale");
   const contract = await CNTPresale.deploy(crinetContract.address, "0x78867bbeef44f2326bf8ddd1941a4439382ef2a7", "0xF62F51CE6191c17380A64d49C58D1206Cd091410");
   await contract.deployed();
+
+  await contract.Initialize();
+  await contract.startICO();
+  
   console.log("Crinet Presale : ", contract.address);
 }
 

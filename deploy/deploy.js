@@ -13,11 +13,11 @@ async function main() {
   // If this script is run directly using `node` you may want to call compile
   // manually to make sure everything is compiled
   // await hre.run('compile');
-  // const [owner ] = await ethers.getSigners()
-  // const Crinet = await hre.ethers.getContractFactory("Crinet");
-  // const crinetContract = await Crinet.deploy();
-  // await crinetContract.deployed();
-  // console.log("Crinet Token : ", crinetContract.address);
+  const [owner ] = await ethers.getSigners()
+  const Crinet = await hre.ethers.getContractFactory("Crinet");
+  const crinetContract = await Crinet.deploy();
+  await crinetContract.deployed();
+  console.log("Crinet Token : ", crinetContract.address);
 
   const CNTPresale = await hre.ethers.getContractFactory("CNTPresale");
   const contract = await CNTPresale.deploy("0x17d0b69a947Db94c825c07216905103dca2Dc732", "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56", "0x0521b960Ee5fc3C40C5Af18fDE4A79752dEd5142");
