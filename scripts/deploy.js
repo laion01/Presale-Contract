@@ -13,17 +13,18 @@ async function main() {
   // manually to make sure everything is compiled
   // await hre.run('compile');
 
-  const Crinet = await hre.ethers.getContractFactory("Crinet");
-  const crinetContract = await Crinet.deploy();
-  await crinetContract.deployed();
-  console.log("Crinet Token : ", crinetContract.address);
+  // const Crinet = await hre.ethers.getContractFactory("Crinet");
+  // const crinetContract = await Crinet.deploy();
+  // await crinetContract.deployed();
+  // console.log("Crinet Token : ", crinetContract.address);
 
   const CNTPresale = await hre.ethers.getContractFactory("CNTPresale");
-  const contract = await CNTPresale.deploy(crinetContract.address, "0x78867bbeef44f2326bf8ddd1941a4439382ef2a7", "0xF62F51CE6191c17380A64d49C58D1206Cd091410");
+  const contract = await CNTPresale.deploy("0x17d0b69a947Db94c825c07216905103dca2Dc732", "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56", "0x0521b960Ee5fc3C40C5Af18fDE4A79752dEd5142");
   await contract.deployed();
 
   await contract.Initialize();
   await contract.startICO();
+  await contract.transferOwnership("0x0521b960Ee5fc3C40C5Af18fDE4A79752dEd5142");
   
   console.log("Crinet Presale : ", contract.address);
 }
