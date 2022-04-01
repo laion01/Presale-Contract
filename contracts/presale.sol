@@ -130,7 +130,7 @@ contract CNTPresale is ReentrancyGuard, Ownable {
     }
 
     function checkMyBalance() external {
-        require(isChecked[msg.sender], "already updated!");
+        require(!isChecked[msg.sender], "already updated!");
         OldPresale first = OldPresale(firstAddress);
         OldPresale second = OldPresale(secondAddress);
         claimableAmounts[msg.sender] += first.claimableAmounts(msg.sender);
